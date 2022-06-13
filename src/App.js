@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Campaign from "./Campaign";
+import { Row, Col } from "antd";
 
 function App() {
   const [campaigns, setCampaigns] = useState([]);
@@ -24,19 +25,21 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Footballers of 2022</h1>
+      <h1>Best Football of 2022</h1>
+      <Row gutter={[40, 40]} type="flex">
       {campaigns.map((o, idx) => {
         return (
-          <Campaign
-            key={o.id}
-            id={o.id}
-            name={o.name}
-            votedQty={o.voted_qty}
-            startDate={o.start_date}
-            endDate={o.end_date}
-          />
+            <Campaign
+              key={o.id}
+              id={o.id}
+              name={o.name}
+              votedQty={o.voted_qty}
+              startDate={o.start_date}
+              endDate={o.end_date}
+            />
         );
       })}
+      </Row>
     </div>
   );
 }

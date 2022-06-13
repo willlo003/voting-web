@@ -1,15 +1,17 @@
 @import "./color.scss";
   
   .campaign-container {
-    position: relative;
-    background: $white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 20);
-    transition: 0.3s;
-    margin: 3rem 3rem;
-    border-radius: 10px;
-    padding: 1rem;
-    height: auto;
-    cursor: pointer;
+    // position: relative;
+    // background: $white;
+    // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 20);
+    // transition: 0.3s;
+    // border-radius: 50px;
+    // margin: 3rem;
+    // padding: 1rem;
+    // height: auto;
+    // width: 100%;
+    // cursor: pointer;
+    
   }
 
   .campaign-popup {
@@ -32,7 +34,7 @@
     .campaign-details {
       background-color: $grey-half-tone;
       margin: 4rem;
-      height: 80%;
+      height: calc(100% - 4rem * 2);
       // width: 80%;
       .details {
         // height: 100%;

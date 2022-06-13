@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import moment from "moment";
 import axios from "axios";
-import { Row, Col } from "antd";
+import { Row, Col, Card } from "antd";
 import "antd/dist/antd.min.css";
 
 const Campaign = (props) => {
@@ -45,47 +45,63 @@ const Campaign = (props) => {
   };
 
   return (
-    <div>
-      <div
+    <Col xs={{ span: 24 }} md={{ span: 12 }} lg={{ span: 8 }} >
+        <Card
         className="campaign-container"
-        style={{
-          backgroundColor: isActive ? "white" : "gray",
-        }}
-        onClick={() => campaignDetails()}
-      >
-        <h2>{props.name}</h2>
-        <h3>Total Voted: {props.votedQty}</h3>
-        <h4>
-          Start Date: {moment(props.startDate).format("YYYY-MM-DD-HH:mm:ss")}
-        </h4>
-        <h4>End Date: {moment(props.endDate).format("YYYY-MM-DD-HH:mm:ss")}</h4>
-        <h4>{isActive ? "Vote" : "Result"}</h4>
-      </div>
+    hoverable
+    style={{
+      width: '100%',
+      backgroundColor: isActive ? "white" : "gray",
+    }}
+    onClick={() => campaignDetails()}
+    cover={<img alt="example" src="https://img.redbull.com/images/c_limit,w_1500,h_1000,f_auto,q_auto/redbullcom/2020/12/16/rc5vx9ggxauwuofe3y4s/fifa-21-fut-toty-header" />}
+  >
+    <h2>{props.name}</h2>
+    <h3>Total Voted: {props.votedQty}</h3>
+    <h4>
+      Start Date: {moment(props.startDate).format("YYYY-MM-DD-HH:mm:ss")}
+    </h4>
+    <h4>End Date: {moment(props.endDate).format("YYYY-MM-DD-HH:mm:ss")}</h4>
+    <h4>{isActive ? "Vote" : "Result"}</h4>
+  </Card>
+
       {showDetails && (
         <div className="campaign-popup">
-          <Row wrap={false} className="campaign-details">
-            <Col flex="12" className="details">
+          <Row className="campaign-details">
+            <Col sm={{ span: 24 }} md={{ span: 24 }} lg={{ span: 12 }} className="details">
               <h2>{props.name}</h2>
-              <h4>
+              <p>
                 Start Date:
                 {moment(props.startDate).format("YYYY-MM-DD-HH:mm:ss")}
-              </h4>
-              <h4>
+              </p>
+              <p>
                 End Date: {moment(props.endDate).format("YYYY-MM-DD-HH:mm:ss")}
-              </h4>
+              </p>
               <h3>Candidates</h3>
               {candidates.map((o, idx) => (
-                <h5 key={`candidate-${idx}`}>{o.name}</h5>
+                <p key={`candidate-${idx}`}>{o.name}</p>
               ))}
             </Col>
-            <Col flex="12" className="action">
-              {isActive ? (
+            <Col sm={{ span: 24 }} md={{ span: 24 }} lg={{ span: 12 }} className="action">
+            <h2>{props.name}</h2>
+              <p>
+                Start Date:
+                {moment(props.startDate).format("YYYY-MM-DD-HH:mm:ss")}
+              </p>
+              <p>
+                End Date: {moment(props.endDate).format("YYYY-MM-DD-HH:mm:ss")}
+              </p>
+              <h3>Candidates</h3>
+              {candidates.map((o, idx) => (
+                <p key={`candidate-${idx}`}>{o.name}</p>
+              ))}
+              {/* {isActive ? (
                 <button onClick={vote}> I wanna vote!</button>
               ) : (
                 <div>
                   <button onClick={getResult}> get the result</button>
                 </div>
-              )}
+              )} */}
             </Col>
           </Row>
           <div className="close">
@@ -99,7 +115,7 @@ const Campaign = (props) => {
           </div>
         </div>
       )}
-    </div>
+    </Col>
   );
 };
 
