@@ -1,0 +1,49 @@
+@import "./color.scss";
+  
+  .campaign-container {
+    position: relative;
+    background: $white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 20);
+    transition: 0.3s;
+    margin: 3rem 3rem;
+    border-radius: 10px;
+    padding: 1rem;
+    height: auto;
+    cursor: pointer;
+  }
+
+  .campaign-popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: $blue-half-tone;
+    z-index: 10;
+
+    .close {
+      position: absolute;
+      right: 0;
+      top: 0;
+      transform: translate(-100%, 50%);
+      cursor: pointer;
+    }
+    
+    .campaign-details {
+      background-color: $grey-half-tone;
+      margin: 4rem;
+      height: 80%;
+      // width: 80%;
+      .details {
+        // height: 100%;
+        // width: 50%;
+        border: 2px solid blue;
+      }
+
+      .action {
+        // height: 100%;
+        // width: 50%;
+        border: 2px solid blue;
+      }
+    }
+  }
