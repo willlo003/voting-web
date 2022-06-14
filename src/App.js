@@ -6,15 +6,17 @@ import { Row } from "antd";
 function App() {
   const [campaigns, setCampaigns] = useState([]);
   useEffect(() => {
-    fetchData(`${process.env.REACT_APP_API_END_POINT}/get-campaigns`).then(
-      (data) => setCampaigns(data.campaigns)
-    );
+    fetchData(
+      `${process.env.REACT_APP_API_END_POINT}/get-campaigns`,
+      "get"
+    ).then((data) => setCampaigns(data.campaigns));
   }, []);
 
-  const fetchData = async (url) => {
+  const fetchData = async (url, method, data) => {
     let res = await axios({
-      method: "get",
+      method: method,
       url: url,
+      data: data,
     });
     if (res.status === 200) {
       return res.data.data;
