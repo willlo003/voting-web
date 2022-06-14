@@ -6,6 +6,7 @@
   - React
   - AWS S3 (host)
   - SCSS
+  - Ant Design
 
 ## Public URL 
 
