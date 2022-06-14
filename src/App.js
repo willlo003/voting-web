@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Campaign from "./Campaign";
-import { Row, Col } from "antd";
+import { Row } from "antd";
 
 function App() {
   const [campaigns, setCampaigns] = useState([]);
