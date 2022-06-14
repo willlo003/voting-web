@@ -1,17 +1,6 @@
 @import "./color.scss";
   
   .campaign-container {
-    // position: relative;
-    // background: $white;
-    // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 20);
-    // transition: 0.3s;
-    // border-radius: 50px;
-    // margin: 3rem;
-    // padding: 1rem;
-    // height: auto;
-    // width: 100%;
-    // cursor: pointer;
-    
   }
 
   .campaign-popup {
@@ -22,6 +11,11 @@
     top: 0;
     background-color: $blue-half-tone;
     z-index: 10;
+    overflow-y: auto;
+
+    h2, p {
+      color: white;
+    }
 
     .close {
       position: absolute;
@@ -35,17 +29,22 @@
       background-color: $grey-half-tone;
       margin: 4rem;
       height: calc(100% - 4rem * 2);
-      // width: 80%;
       .details {
-        // height: 100%;
-        // width: 50%;
-        border: 2px solid blue;
       }
 
-      .action {
-        // height: 100%;
-        // width: 50%;
-        border: 2px solid blue;
+      .candidates {
+
+        .candidate {
+          width: "100%";
+          background: $grey-half-tone;
+          border: 4px ridge $gold,
+        }
+
+        .candidate-winner {
+          width: "100%";
+          background: $gold;
+          border: 4px ridge $gold,
+        }
       }
     }
   }

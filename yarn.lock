@@ -4772,6 +4772,11 @@ he@^1.2.0:
   resolved "https://registry.yarnpkg.com/he/-/he-1.2.0.tgz#84ae65fa7eafb165fddb61566ae14baf05664f0f"
   integrity sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==
 
+hkid@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/hkid/-/hkid-1.2.1.tgz#4f06fc44a913acc300b7712924ca18e8e4c9ea8e"
+  integrity sha512-uBxugoGq0BQvnfH88EZy2LllyffwyGxUVYzVkMSnR8nUS4A3MX9GmdXoF6eF4MtcWSaqbVz5JdBy1aLrM9JwPw==
+
 hoopy@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/hoopy/-/hoopy-0.1.4.tgz#609207d661100033a9a9402ad3dea677381c1b1d"

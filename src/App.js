@@ -25,10 +25,10 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Best Football of 2022</h1>
+      <h1>Best Football Players of 2022</h1>
       <Row gutter={[40, 40]} type="flex">
-      {campaigns.map((o, idx) => {
-        return (
+        {campaigns.map((o, idx) => {
+          return (
             <Campaign
               key={o.id}
               id={o.id}
@@ -37,8 +37,8 @@ function App() {
               startDate={o.start_date}
               endDate={o.end_date}
             />
-        );
-      })}
+          );
+        })}
       </Row>
     </div>
   );
